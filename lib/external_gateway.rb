@@ -69,7 +69,8 @@ class ExternalGateway < PaymentMethod
   #that the controller can find what it needs to.
   #By default, we try and parse JSON out of the param.
   def self.parse_custom_data(params)
-    return ActiveSupport::JSON.decode(params[:custom_data])
+    params[:custom_data]
+    # return ActiveSupport::JSON.decode(params[:custom_data])
   end
 
 
