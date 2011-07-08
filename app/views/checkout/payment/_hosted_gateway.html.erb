@@ -6,7 +6,7 @@
       <% #First, disable all the existing form inputs -%>
       <% # remove erb tags and hash to uncomment -> $('form :input').attr('disabled', false); %>
       <% #Next, change where the form is pointing to -%>
-      $('form[id=checkout_form_payment]').attr('action', '<%= escape_javascript(payment_method.get_server) %>');
+      $('form[id="checkout_form_payment"]').attr('action', '<%= escape_javascript(payment_method.get_server) %>');
       $('form').attr('method', 'post');
 
       <% #Finally, add the new inputs to the form to submit what we need. -%>
